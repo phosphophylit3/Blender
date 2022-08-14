@@ -49,7 +49,8 @@ for mat in bpy.data.materials:
     nodes.remove(emission)
     
 #Fixing image files
-try: 
-    bpy.data.images['*'].filepath = 'C:/Blender/textures/*.png' 
+try:
+    for image in bpy.data.images:
+        image.filepath = f'C:/Program Files (x86)/Steam/steamapps/common/Blender/La/{image.name}.png'
 except:
     pass
